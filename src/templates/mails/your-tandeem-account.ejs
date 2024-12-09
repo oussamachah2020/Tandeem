@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Bienvenue sur tandeem!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+        }
+        .header {
+            background-color: #f8f8f8;
+            padding: 10px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="email-container">
+    <div class="header">
+        <h1>Bienvenue sur tandeem !</h1>
+    </div>
+    <div class="content">
+        <p>Hello <%= name %> 👋</p>
+        <p>Nous sommes heureux de vous informer que votre compte tandeem a été bien créé.sssssss</p>
+        <p>Vous pouvez maintenant vous connecter en utilisant les identifiants suivants :</p>
+        <p>
+            <strong>Email :</strong><%= email %><br>
+            <strong>Mot de passe initiale:</strong> <%= password %>
+        </p>
+        <p>Veuillez conserver vos identifiants en toute sécurité et ne les partagez avec personne.</p>
+        <p>Nous sommes ravis de vous voir rejoindre tandeem !</p>
+    </div>
+    <div class="footer">
+        <p>Si vous avez des questions, n'hésitez pas à <a href="mailto:support@tandeem.com">contacter notre équipe de
+                support</a>.</p>
+        <p><%= new Date().getFullYear() %> &copy; tandeem. Tous droits réservés.</p>
+    </div>
+</div>
+</body>
+</html>
