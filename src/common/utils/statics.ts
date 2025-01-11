@@ -1,5 +1,5 @@
 import {JobLevel, OfferStatusName, PaymentMethod} from "@prisma/client";
-import {ContractStatusName} from ".prisma/client";
+import { ContractStatusName } from "@prisma/client";
 
 export const contractStatuses: Record<ContractStatusName, string> =
     {

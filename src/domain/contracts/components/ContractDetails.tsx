@@ -3,7 +3,7 @@ import {ArrowRightIcon, EyeIcon} from "@heroicons/react/24/outline";
 import ContractStatus from "@/domain/contracts/components/ContractStatus";
 import {FC} from "react";
 import {formatDate, getDownloadUrl} from "@/common/utils/functions";
-import {Contract} from ".prisma/client";
+import { Contract } from "@prisma/client";
 import DetailsSection from "@/common/components/details-table/DetailsSection";
 import DetailsRow from "@/common/components/details-table/DetailsRow";
 import {useStaticValues} from "@/common/context/StaticValuesContext";

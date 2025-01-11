@@ -1,7 +1,7 @@
 import {NextApiRequest, NextApiResponse} from 'next'
 import prisma from "@/common/libs/prisma";
 import {constants} from "http2";
-import {Prisma} from ".prisma/client";
+import { Prisma } from "@prisma/client";
 import SortOrder = Prisma.SortOrder;
 
 

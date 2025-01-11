@@ -1,6 +1,6 @@
 import prisma from "@/common/libs/prisma";
 import staticValues from "@/common/context/StaticValues";
-import {Prisma} from ".prisma/client";
+import { Prisma } from "@prisma/client";
 import SortOrder = Prisma.SortOrder;
 
 class IdeaBoxService {

@@ -1,6 +1,6 @@
 import {FC, useMemo} from "react";
 import Label from "@/common/components/atomic/Label";
-import {ContractStatusName} from ".prisma/client";
+import { ContractStatusName } from "@prisma/client";
 import {useStaticValues} from "@/common/context/StaticValuesContext";
 
 interface Props {
