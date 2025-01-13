@@ -10,7 +10,10 @@ interface Props {
 }
 
 export const PartnerUpdateForm: FC<Props> = ({partner}) => {
-    const hasOffers = useMemo(() => partner.offers.length > 0, [partner.offers.length])
+    const hasOffers = useMemo(
+      () => partner.offers?.length > 0,
+      [partner.offers.length]
+    );
     const {label, category, paymentMethod, tooltip} = useStaticValues()
     return (
         <Form

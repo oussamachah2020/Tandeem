@@ -10,7 +10,7 @@ class PartnerService {
       include: {
         representative: true,
         contract: true,
-        // offers: true
+        offers: true,
       },
     });
 
