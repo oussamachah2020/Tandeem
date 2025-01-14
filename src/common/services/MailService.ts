@@ -9,11 +9,11 @@ class MailService {
 
 constructor() {
     try {
-        const host = process.env.NEXT_PUBLIC_SMTP_HOST;
+        const host = process.env.NEXT_PUBLIC_OVH_HOST;
         const port = process.env.NEXT_PUBLIC_SMTP_PORT;
-        const email = process.env.NEXT_PUBLIC_SMTP_EMAIL;
-        const user = process.env.NEXT_PUBLIC_SMTP_LOGIN;
-        const pass = process.env.NEXT_PUBLIC_SMTP_PASSWORD;
+        const email = process.env.NEXT_PUBLIC_OVH_EMAIL;
+        const user = process.env.NEXT_PUBLIC_OVH_EMAIL;
+        const pass = process.env.NEXT_PUBLIC_OVH_PASSWORD;
 
         console.log('Mail Service Config:', {
             host,
@@ -36,14 +36,17 @@ constructor() {
         }
 
         this.transporter = createTransport({
-            pool: true,
-            secure: true,
-            host,
-            port: Number(port),
-            auth: {
-                user,
-                pass
-            },
+          pool: true,
+          secure: false,
+          host,
+          port: Number(port),
+          auth: {
+            user,
+            pass,
+          },
+          tls: {
+            rejectUnauthorized: false, // Add this line
+          },
         });
 
         this.sender = `tandeem Team <${email}>`;
