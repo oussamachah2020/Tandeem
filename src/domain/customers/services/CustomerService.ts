@@ -77,7 +77,10 @@ class CustomerService {
                     }
                 }
             })
-        await mailService.sendAccountDetails({name: customerDto.name, address: customerDto.email}, rawPassword)
+        await mailService.sendAccountDetails(
+          { name: customerDto.representativeName, address: customerDto.email },
+          rawPassword
+        );
         return 'customerAddedSuccess'
     }
 
